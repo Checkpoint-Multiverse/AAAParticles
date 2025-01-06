@@ -59,7 +59,6 @@ public class EffekRenderer {
         if (RenderContext.renderLevelDeferred() && RenderStateCapture.LEVEL.hasCapture) {
             RenderStateCapture.LEVEL.hasCapture = false;
 
-            pasteToCurrentDepthFrom(RenderStateCapture.CAPTURED_WORLD_DEPTH_BUFFER);
             EffekRenderer.renderWorldEffeks(partial, RenderStateCapture.LEVEL.pose, RenderStateCapture.LEVEL.projection, RenderStateCapture.LEVEL.camera);
         }
         if (RenderContext.renderHandDeferred() && renderHand) {
